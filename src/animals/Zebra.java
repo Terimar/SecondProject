@@ -2,9 +2,6 @@ package animals;
 
 public class Zebra extends Animal {
 
-    private int age;
-    private float weight;
-
     public Zebra() {}
 
     public Zebra(String type, int age, float weight){

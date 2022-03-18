@@ -2,9 +2,6 @@ package animals;
 
 public class Giraffe extends Animal {
 
-    private int age;
-    private float weight;
-
     public Giraffe () {}
 
     public Giraffe(String type, int age, float weight){
