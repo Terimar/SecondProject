@@ -3,13 +3,17 @@ package animals;
 public abstract class Animal {
 
     private String type;
+    private int age;
+    private float weight;
     private boolean isEaten;
     private Aviary aviary;
 
     public Animal () {}
 
-    public Animal(String type){
+    public Animal(String type, int age, float weight){
         this.type = type;
+        this.age = age;
+        this.weight = weight;
         isEaten = false;
     }
 

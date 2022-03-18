@@ -8,25 +8,7 @@ public class Tiger extends Animal {
     public Tiger () {}
 
     public Tiger(String type, int age, float weight){
-        super(type);
-        this.age = age;
-        this.weight = weight;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public float getWeight() {
-        return weight;
-    }
-
-    public void setWeight(float weight) {
-        this.weight = weight;
+        super(type, age, weight);
     }
 
     @Override
