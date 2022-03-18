@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class Worker {
     private String firstName;

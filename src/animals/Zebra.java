@@ -1,13 +1,13 @@
-package Animals;
+package animals;
 
-public class Giraffe extends Animal {
+public class Zebra extends Animal {
 
     private int age;
     private float weight;
 
-    public Giraffe () {}
+    public Zebra() {}
 
-    public Giraffe(String type, int age, float weight){
+    public Zebra(String type, int age, float weight){
         super(type);
         this.age = age;
         this.weight = weight;

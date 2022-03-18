@@ -1,13 +1,13 @@
-package Animals;
+package animals;
 
-public class Zebra extends Animal {
+public class Lion extends Animal {
 
     private int age;
     private float weight;
 
-    public Zebra() {}
+    public Lion () {}
 
-    public Zebra(String type, int age, float weight){
+    public Lion(String type, int age, float weight){
         super(type);
         this.age = age;
         this.weight = weight;
@@ -31,6 +31,6 @@ public class Zebra extends Animal {
 
     @Override
     public void say() {
-        System.out.println("I am " + super.getType() + " and I will eat only herbal");
+        System.out.println("I am " + super.getType() + " and I will eat only meat");
     }
 }

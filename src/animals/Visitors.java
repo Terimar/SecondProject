@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class Visitors {
     private int count;
