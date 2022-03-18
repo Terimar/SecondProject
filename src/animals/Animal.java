@@ -21,6 +21,14 @@ public abstract class Animal {
         this.type = type;
     }
 
+    public boolean isEaten() {
+        return isEaten;
+    }
+
+    public void setEaten(boolean eaten) {
+        isEaten = eaten;
+    }
+
     public abstract void say();
 
     public void eat(Food food, String firstName) {
