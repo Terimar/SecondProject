@@ -37,12 +37,4 @@ public class Worker {
     public void setPosition(String position) {
         this.position = position;
     }
-
-    public void giveMealToAnimal(Animal animal, Food food) {
-        animal.eat(food, firstName);
-    }
-
-    public void changeAnimalAviary(Animal animal, Aviary aviary) {
-        animal.setAviary(aviary);
-    }
 }

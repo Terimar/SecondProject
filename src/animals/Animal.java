@@ -51,23 +51,23 @@ public abstract class Animal {
 
     public abstract void say();
 
-    public void eat(Food food, String firstName) {
+    public void eat(Food food) {
         String foodType = food.getType();
         int foodPortion = food.getPortion();
 
         if (isEaten) {
-            System.out.println("Sorry, " + firstName + ", I was eaten already today");
+            System.out.println("Sorry, I was eaten already today");
         } else {
             if (type.equals("herbivore") && foodType.equals("Herbal")) {
                 isEaten = true;
                 food.setPortion(foodPortion - 1);
-                System.out.println("Thank you, " + firstName + ", only " + food.getPortion() + " portions are left");
+                System.out.println("Thank you, only " + food.getPortion() + " portions are left");
             } else if (type.equals("carnivore") && foodType.equals("Meat")) {
                 isEaten = true;
                 food.setPortion(foodPortion - 1);
-                System.out.println("Thank you, " + firstName + ", only " + food.getPortion() + " portions are left");
+                System.out.println("Thank you, only " + food.getPortion() + " portions are left");
             } else {
-                System.out.println("Sorry, " + firstName + ", I don't eat this food");
+                System.out.println("Sorry, I don't eat this food");
             }
         }
     }

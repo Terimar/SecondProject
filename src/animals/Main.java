@@ -15,9 +15,9 @@ public class Main {
 
         Worker worker = new Worker("Alex", "Smit", "worker");
 
-        Lion lion = new Lion("carnivore", 5, 63.4f);
+        Animal lion = new Lion("carnivore", 5, 63.4f);
         lion.setAviary(aviary1);
-        Zebra zebra = new Zebra("herbivore", 3, 54.7f);
+        Animal zebra = new Zebra("herbivore", 3, 54.7f);
         zebra.setAviary(aviary2);
 
         Zoo zoo = new Zoo("Zooland", 3);
@@ -29,19 +29,19 @@ public class Main {
         lion.say();
         zebra.say();
 
-        worker.giveMealToAnimal(lion, meat);
-        worker.giveMealToAnimal(lion, herbal);
-        worker.giveMealToAnimal(zebra, meat);
-        worker.giveMealToAnimal(zebra, herbal);
+        lion.eat(meat);
+        lion.eat(herbal);
+        zebra.eat(meat);
+        zebra.eat(herbal);
 
         System.out.println("Lion lives in the " + lion.getAviary().getId() + " cage");
         System.out.println("Zebra lives in the " + zebra.getAviary().getId() + " cage");
         System.out.println("Lets change their addresses");
 
-        worker.changeAnimalAviary(lion, aviary3);
-        worker.changeAnimalAviary(zebra, aviary1);
+        lion.setAviary(aviary3);
+        zebra.setAviary(aviary1);
 
         System.out.println("Now Lion lives in the " + lion.getAviary().getId() + " cage");
-        System.out.println("And zebra lives in the " + zebra.getAviary().getId() + " cage");
+        System.out.println("And Zebra lives in the " + zebra.getAviary().getId() + " cage");
     }
 }
