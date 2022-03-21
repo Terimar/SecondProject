@@ -12,4 +12,9 @@ public class Tiger extends Animal {
     public void say() {
         System.out.println("I am " + super.getType() + " and I will eat only meat");
     }
+
+    @Override
+    public String toString() {
+        return "Tiger (type: " + super.getType() + ", age: " + super.getAge() + ", weight: " + super.getWeight() + ")";
+    }
 }

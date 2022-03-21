@@ -12,4 +12,9 @@ public class Zebra extends Animal {
     public void say() {
         System.out.println("I am " + super.getType() + " and I will eat only herbal");
     }
+
+    @Override
+    public String toString() {
+        return "Zebra (type: " + super.getType() + ", age: " + super.getAge() + ", weight: " + super.getWeight() + ")";
+    }
 }

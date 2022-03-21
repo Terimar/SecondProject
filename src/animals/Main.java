@@ -17,8 +17,12 @@ public class Main {
 
         Animal lion = new Lion("carnivore", 5, 63.4f);
         lion.setAviary(aviary1);
+        System.out.println(lion);
         Animal zebra = new Zebra("herbivore", 3, 54.7f);
         zebra.setAviary(aviary2);
+        System.out.println(zebra);
+        Animal tiger = new Tiger("carnivore", 4, 66.5f);
+        System.out.println(tiger);
 
         Zoo zoo = new Zoo("Zooland", 3);
         Set<Aviary> aviaries = new HashSet<>();
