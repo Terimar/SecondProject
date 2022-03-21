@@ -72,6 +72,19 @@ public abstract class Animal {
         }
     }
 
+    @Override
+    public int hashCode() {
+        int x = type.equals("herbivore") ? 2 : 3;
+        int weight = (int) getWeight();
+        int age = getAge();
+        return x * weight * age;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        return hashCode() == object.hashCode();
+    }
+
     public Aviary getAviary() {
         return aviary;
     }

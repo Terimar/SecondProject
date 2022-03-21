@@ -16,6 +16,7 @@ public class Main {
         Worker worker = new Worker("Alex", "Smit", "worker");
 
         Animal lion = new Lion("carnivore", 5, 63.4f);
+        Animal lion2 = new Lion("carnivore", 5, 63.4f);
         lion.setAviary(aviary1);
         System.out.println(lion);
         Animal zebra = new Zebra("herbivore", 3, 54.7f);
@@ -47,5 +48,17 @@ public class Main {
 
         System.out.println("Now Lion lives in the " + lion.getAviary().getId() + " cage");
         System.out.println("And Zebra lives in the " + zebra.getAviary().getId() + " cage");
+
+        System.out.println(lion.hashCode());
+        System.out.println(tiger.hashCode());
+        System.out.println(zebra.hashCode());
+
+        boolean isTwoLionAreTheSame = lion.equals(lion2);
+        boolean isLionAndZebraAreTheSame = lion.equals(zebra);
+
+        System.out.println("They say that in our zoo the same lion gets a double portion of food, " +
+                "this is " + isTwoLionAreTheSame);
+        System.out.println("and they also say that we don’t have a zebra, but we just painted a lion, " +
+                "this is " + isLionAndZebraAreTheSame);
     }
 }
