@@ -1,19 +1,15 @@
 package animals;
 
 public class Visitors {
-    private int count;
+    private static int count;
+    private static int maxCount;
 
-    public Visitors () {}
-
-    public Visitors (int count) {
-        this.count = count;
+    static {
+        maxCount = 150;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
+    public static void totalVisitors() {
+        count++;
+        System.out.println("Current amount visitors - " + count);
     }
 }
