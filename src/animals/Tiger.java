@@ -1,6 +1,11 @@
 package animals;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Tiger extends Animal {
+
+    private static final Logger LOGGER = LogManager.getLogger(Tiger.class);
 
     public Tiger () {}
 
@@ -10,7 +15,7 @@ public class Tiger extends Animal {
 
     @Override
     public void say() {
-        System.out.println("I am " + super.getType() + " and I will eat only meat");
+        LOGGER.info("I am " + super.getType() + " and I will eat only meat");
     }
 
     @Override

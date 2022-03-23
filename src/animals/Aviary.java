@@ -1,6 +1,7 @@
 package animals;
 
 public class Aviary {
+
     private int id;
 
     public Aviary(int id) {

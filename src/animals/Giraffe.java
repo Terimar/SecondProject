@@ -1,6 +1,11 @@
 package animals;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Giraffe extends Animal implements IMove {
+
+    private static final Logger LOGGER = LogManager.getLogger(Giraffe.class);
 
     public Giraffe () {}
 
@@ -10,10 +15,10 @@ public class Giraffe extends Animal implements IMove {
 
     @Override
     public void say() {
-        System.out.println("I am " + super.getType() + " and I will eat only herbal");
+        LOGGER.info("I am " + super.getType() + " and I will eat only herbal");
     }
 
     public void move(){
-        System.out.println("I can walk");
+        LOGGER.info("I can walk");
     }
 }

@@ -1,6 +1,11 @@
 package animals;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Zebra extends Animal {
+
+    private static final Logger LOGGER = LogManager.getLogger(Zebra.class);
 
     public Zebra() {}
 
@@ -10,7 +15,7 @@ public class Zebra extends Animal {
 
     @Override
     public void say() {
-        System.out.println("I am " + super.getType() + " and I will eat only herbal");
+        LOGGER.info("I am " + super.getType() + " and I will eat only herbal");
     }
 
     @Override

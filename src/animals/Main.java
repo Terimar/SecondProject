@@ -1,9 +1,14 @@
 package animals;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class Main {
+
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
         Food meat = new Food("Meat", 3);
@@ -18,12 +23,12 @@ public class Main {
         Animal lion = new Lion("carnivore", 5, 63.4f);
         Animal lion2 = new Lion("carnivore", 5, 63.4f);
         lion.setAviary(aviary1);
-        System.out.println(lion);
+        LOGGER.info(lion);
         Animal zebra = new Zebra("herbivore", 3, 54.7f);
         zebra.setAviary(aviary2);
-        System.out.println(zebra);
+        LOGGER.info(zebra);
         Animal tiger = new Tiger("carnivore", 4, 66.5f);
-        System.out.println(tiger);
+        LOGGER.info(tiger);
 
         Zoo zoo = new Zoo("Zooland", 3);
         Set<Aviary> aviaries = new HashSet<>();
@@ -39,26 +44,26 @@ public class Main {
         zebra.eat(meat);
         zebra.eat(herbal);
 
-        System.out.println("Lion lives in the " + lion.getAviary().getId() + " cage");
-        System.out.println("Zebra lives in the " + zebra.getAviary().getId() + " cage");
-        System.out.println("Lets change their addresses");
+        LOGGER.info("Lion lives in the " + lion.getAviary().getId() + " cage");
+        LOGGER.info("Zebra lives in the " + zebra.getAviary().getId() + " cage");
+        LOGGER.info("Lets change their addresses");
 
         lion.setAviary(aviary3);
         zebra.setAviary(aviary1);
 
-        System.out.println("Now Lion lives in the " + lion.getAviary().getId() + " cage");
-        System.out.println("And Zebra lives in the " + zebra.getAviary().getId() + " cage");
+        LOGGER.info("Now Lion lives in the " + lion.getAviary().getId() + " cage");
+        LOGGER.info("And Zebra lives in the " + zebra.getAviary().getId() + " cage");
 
-        System.out.println(lion.hashCode());
-        System.out.println(tiger.hashCode());
-        System.out.println(zebra.hashCode());
+        LOGGER.info(lion.hashCode());
+        LOGGER.info(tiger.hashCode());
+        LOGGER.info(zebra.hashCode());
 
         boolean isTwoLionAreTheSame = lion.equals(lion2);
         boolean isLionAndZebraAreTheSame = lion.equals(zebra);
 
-        System.out.println("They say that in our zoo the same lion gets a double portion of food, " +
+        LOGGER.info("They say that in our zoo the same lion gets a double portion of food, " +
                 "this is " + isTwoLionAreTheSame);
-        System.out.println("and they also say that we don’t have a zebra, but we just painted a lion, " +
+        LOGGER.info("and they also say that we don’t have a zebra, but we just painted a lion, " +
                 "this is " + isLionAndZebraAreTheSame);
     }
 }

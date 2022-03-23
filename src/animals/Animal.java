@@ -1,6 +1,11 @@
 package animals;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public abstract class Animal {
+
+    private static final Logger LOGGER = LogManager.getLogger(Animal.class);
 
     private String type;
     private int age;
@@ -56,18 +61,18 @@ public abstract class Animal {
         int foodPortion = food.getPortion();
 
         if (isEaten) {
-            System.out.println("Sorry, I was eaten already today");
+            LOGGER.info("Sorry, I was eaten already today");
         } else {
             if (type.equals("herbivore") && foodType.equals("Herbal")) {
                 isEaten = true;
                 food.setPortion(foodPortion - 1);
-                System.out.println("Thank you, only " + food.getPortion() + " portions are left");
+                LOGGER.info("Thank you, only " + food.getPortion() + " portions are left");
             } else if (type.equals("carnivore") && foodType.equals("Meat")) {
                 isEaten = true;
                 food.setPortion(foodPortion - 1);
-                System.out.println("Thank you, only " + food.getPortion() + " portions are left");
+                LOGGER.info("Thank you, only " + food.getPortion() + " portions are left");
             } else {
-                System.out.println("Sorry, I don't eat this food");
+                LOGGER.info("Sorry, I don't eat this food");
             }
         }
     }

@@ -1,8 +1,14 @@
 package animals;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Set;
 
 public class Zoo {
+
+    private static final Logger LOGGER = LogManager.getLogger(Zoo.class);
+
     private String name;
     private int cage;
     private Set<Aviary> aviaryList;
@@ -42,7 +48,7 @@ public class Zoo {
             aviariesCount = aviaryList.size();
         }
         int freeAviariesCount = cage - aviariesCount;
-        System.out.println("At this moment there are only " + freeAviariesCount + " free cages");
+        LOGGER.info("At this moment there are only " + freeAviariesCount + " free cages");
         return freeAviariesCount;
     }
 

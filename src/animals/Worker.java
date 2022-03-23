@@ -1,6 +1,7 @@
 package animals;
 
 public class Worker {
+
     private String firstName;
     private String lastName;
     private String position;

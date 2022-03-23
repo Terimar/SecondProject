@@ -1,6 +1,12 @@
 package animals;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Visitors {
+
+    private static final Logger LOGGER = LogManager.getLogger(Visitors.class);
+
     private static int count;
     private static int maxCount;
 
@@ -10,6 +16,6 @@ public class Visitors {
 
     public static void totalVisitors() {
         count++;
-        System.out.println("Current amount visitors - " + count);
+        LOGGER.info("Current amount visitors - " + count);
     }
 }
