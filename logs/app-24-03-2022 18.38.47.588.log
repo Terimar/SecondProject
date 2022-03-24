@@ -1,0 +1,22 @@
+2022-03-24 18:38:48,577 INFO a.Main [main] Lion (type: carnivore, age: 5, weight: 63.4)
+2022-03-24 18:38:48,622 INFO a.Main [main] Zebra (type: herbivore, age: 3, weight: 54.7)
+2022-03-24 18:38:48,625 INFO a.Main [main] Tiger (type: carnivore, age: 4, weight: 66.5)
+2022-03-24 18:38:48,633 INFO a.Lion [main] I am carnivore and I will eat only meat
+2022-03-24 18:38:48,635 INFO a.Zebra [main] I am herbivore and I will eat only herbal
+2022-03-24 18:38:48,640 INFO a.Animal [main] Thank you, only 2 portions are left
+2022-03-24 18:38:48,646 INFO a.Animal [main] Sorry, I was eaten already today
+2022-03-24 18:38:48,649 INFO a.Animal [main] Sorry, I don't eat this food
+2022-03-24 18:38:48,652 INFO a.Animal [main] Thank you, only 1 portions are left
+2022-03-24 18:38:48,655 INFO a.Main [main] Lion lives in the 1 cage
+2022-03-24 18:38:48,657 INFO a.Main [main] Zebra lives in the 2 cage
+2022-03-24 18:38:48,658 INFO a.Main [main] Lets change their addresses
+2022-03-24 18:38:48,661 INFO a.Main [main] Now Lion lives in the 3 cage
+2022-03-24 18:38:48,662 INFO a.Main [main] And Zebra lives in the 1 cage
+2022-03-24 18:38:48,664 INFO a.Main [main] 945
+2022-03-24 18:38:48,665 INFO a.Main [main] 792
+2022-03-24 18:38:48,666 INFO a.Main [main] 324
+2022-03-24 18:38:48,667 INFO a.Main [main] They say that in our zoo the same lion gets a double portion of food, this is true
+2022-03-24 18:38:48,670 INFO a.Main [main] and they also say that we don’t have a zebra, but we just painted a lion, this is false
+2022-03-24 18:38:48,674 INFO a.Giraffe [main] I can walk on my own
+2022-03-24 18:38:48,675 ERROR a.Giraffe [main] I need to grow up
+2022-03-24 18:38:48,677 ERROR a.Giraffe [main] Usually giraffe lives less than 50 years

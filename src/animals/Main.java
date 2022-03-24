@@ -1,5 +1,6 @@
 package animals;
 
+import animals.exceptions.AgeWrongException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,7 +11,7 @@ public class Main {
 
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AgeWrongException {
         Food meat = new Food("Meat", 3);
         Food herbal = new Food("Herbal", 2);
 
@@ -65,5 +66,15 @@ public class Main {
                 "this is " + isTwoLionAreTheSame);
         LOGGER.info("and they also say that we don’t have a zebra, but we just painted a lion, " +
                 "this is " + isLionAndZebraAreTheSame);
+
+        Giraffe giraffe = new Giraffe("herbivore", 5, 52.7f);
+        giraffe.move();
+        // if age of giraffe will be less than 2 years then AgeWrongException will be caught
+        Giraffe giraffeYoung = new Giraffe("herbivore", 1, 15.9f);
+        giraffeYoung.move();
+        // if age of giraffe will be more than 50 years then AgeWrongException will be thrown
+        // (because they life period is usually less then 35-40 years)
+        Giraffe giraffeOld = new Giraffe("herbivore", 51, 62.5f);
+        giraffeOld.move();
     }
 }
