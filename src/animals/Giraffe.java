@@ -4,7 +4,7 @@ import animals.exceptions.AgeWrongException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Giraffe extends Animal implements IMove, AutoCloseable {
+public class Giraffe extends Animal implements IMove {
 
     private static final Logger LOGGER = LogManager.getLogger(Giraffe.class);
 
@@ -35,10 +35,5 @@ public class Giraffe extends Animal implements IMove, AutoCloseable {
         } catch (AgeWrongException e) {
             LOGGER.error("I need to grow up");
         }
-    }
-
-    @Override
-    public void close() throws Exception {
-        System.out.println("fbdfb");
     }
 }
