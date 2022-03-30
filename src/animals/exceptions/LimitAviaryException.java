@@ -1,8 +1,8 @@
 package animals.exceptions;
 
-public class WrongCountWingException extends Exception{
+public class LimitAviaryException extends Exception{
 
-    public WrongCountWingException(String message){
+    public LimitAviaryException(String message){
         super(message);
     }
 }

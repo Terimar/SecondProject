@@ -11,8 +11,8 @@ public class Giraffe extends Animal implements IMove {
     public Giraffe() {
     }
 
-    public Giraffe(String type, int age, float weight) {
-        super(type, age, weight);
+    public Giraffe(int id, String type, int age, float weight){
+        super(id, type, age, weight);
     }
 
     @Override

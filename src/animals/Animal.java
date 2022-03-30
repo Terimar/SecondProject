@@ -7,19 +7,28 @@ public abstract class Animal {
 
     private static final Logger LOGGER = LogManager.getLogger(Animal.class);
 
+    private int id;
     private String type;
     private int age;
     private float weight;
     private boolean isEaten;
-    private Aviary aviary;
 
     public Animal () {}
 
-    public Animal(String type, int age, float weight){
+    public Animal(int id, String type, int age, float weight){
+        this.id = id;
         this.type = type;
         this.age = age;
         this.weight = weight;
         isEaten = false;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getType() {
@@ -88,13 +97,5 @@ public abstract class Animal {
     @Override
     public boolean equals(Object object) {
         return hashCode() == object.hashCode();
-    }
-
-    public Aviary getAviary() {
-        return aviary;
-    }
-
-    public void setAviary(Aviary aviary) {
-        this.aviary = aviary;
     }
 }

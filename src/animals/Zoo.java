@@ -1,5 +1,6 @@
 package animals;
 
+import animals.exceptions.LimitAviaryException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,20 +11,20 @@ public class Zoo {
     private static final Logger LOGGER = LogManager.getLogger(Zoo.class);
 
     private String name;
-    private int cage;
+    private int maxCageCount;
     private Set<Aviary> aviaryList;
 
     public Zoo () {}
 
-    public Zoo(String name, int cage, Set<Aviary> aviaryList) {
+    public Zoo(String name, int maxCageCount, Set<Aviary> aviaryList) {
         this.name = name;
-        this.cage = cage;
+        this.maxCageCount = maxCageCount;
         this.aviaryList = aviaryList;
     }
 
-    public Zoo(String name, int cage) {
+    public Zoo(String name, int maxCageCount) {
         this.name = name;
-        this.cage = cage;
+        this.maxCageCount = maxCageCount;
     }
 
     public String getName() {
@@ -34,12 +35,12 @@ public class Zoo {
         this.name = name;
     }
 
-    public int getCage() {
-        return cage;
+    public int getMaxCageCount() {
+        return maxCageCount;
     }
 
-    public void setCage(int cage) {
-        this.cage = cage;
+    public void setMaxCageCount(int maxCageCount) {
+        this.maxCageCount = maxCageCount;
     }
 
     public int getCountOfAvailableAviaries() {
@@ -47,7 +48,7 @@ public class Zoo {
         if (!aviaryList.isEmpty()) {
             aviariesCount = aviaryList.size();
         }
-        int freeAviariesCount = cage - aviariesCount;
+        int freeAviariesCount = maxCageCount - aviariesCount;
         LOGGER.info("At this moment there are only " + freeAviariesCount + " free cages");
         return freeAviariesCount;
     }
@@ -56,8 +57,11 @@ public class Zoo {
         return aviaryList;
     }
 
-    public void setAviaryList(Set<Aviary> aviaries) {
+    public void setAviaryList(Set<Aviary> aviaries) throws LimitAviaryException {
+        if (aviaries.size() > maxCageCount) {
+            throw new LimitAviaryException("Sorry, our zoo can not have more aviaries than " + maxCageCount);
+        }
         this.aviaryList = aviaries;
-
+        LOGGER.info("there is free space for building new aviaries in Zooland: " + (maxCageCount - aviaries.size()));
     }
 }

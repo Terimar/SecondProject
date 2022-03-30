@@ -9,8 +9,8 @@ public class Tiger extends Animal {
 
     public Tiger () {}
 
-    public Tiger(String type, int age, float weight){
-        super(type, age, weight);
+    public Tiger(int id, String type, int age, float weight){
+        super(id, type, age, weight);
     }
 
     @Override
@@ -20,6 +20,7 @@ public class Tiger extends Animal {
 
     @Override
     public String toString() {
-        return "Tiger (type: " + super.getType() + ", age: " + super.getAge() + ", weight: " + super.getWeight() + ")";
+        return "Tiger (id: " + super.getId() + ", type: " + super.getType() + ", age: " + super.getAge() +
+                ", weight: " + super.getWeight() + ")";
     }
 }

@@ -1,7 +1,0 @@
-2022-03-24 18:36:17,657 INFO a.Main [main] Lion (type: carnivore, age: 5, weight: 63.4)
-2022-03-24 18:36:17,668 INFO a.Main [main] Zebra (type: herbivore, age: 3, weight: 54.7)
-2022-03-24 18:36:17,672 INFO a.Main [main] Tiger (type: carnivore, age: 4, weight: 66.5)
-2022-03-24 18:36:17,677 INFO a.Lion [main] I am carnivore and I will eat only meat
-2022-03-24 18:36:17,679 INFO a.Zebra [main] I am herbivore and I will eat only herbal
-2022-03-24 18:36:17,681 INFO a.Animal [main] Thank you, only 2 portions are left
-2022-03-24 18:36:17,683 INFO a.Animal [main] Sorry, I was eaten already today

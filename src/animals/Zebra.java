@@ -9,8 +9,8 @@ public class Zebra extends Animal {
 
     public Zebra() {}
 
-    public Zebra(String type, int age, float weight){
-        super(type, age, weight);
+    public Zebra(int id, String type, int age, float weight){
+        super(id, type, age, weight);
     }
 
     @Override
@@ -20,6 +20,7 @@ public class Zebra extends Animal {
 
     @Override
     public String toString() {
-        return "Zebra (type: " + super.getType() + ", age: " + super.getAge() + ", weight: " + super.getWeight() + ")";
+        return "Zebra (id: " + super.getId() + ", type: " + super.getType() + ", age: " + super.getAge() +
+                ", weight: " + super.getWeight() + ")";
     }
 }
